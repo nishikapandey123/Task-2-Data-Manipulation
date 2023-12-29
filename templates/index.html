@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Data Manipulation Assignment</title>
+</head>
+<body>
+    <div id="output-container">
+        {% for person in persons %}
+            <p>Name: {{ person.name }}, Age: {{ person.age }}, City: {{ person.city }}</p>
+        {% endfor %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
